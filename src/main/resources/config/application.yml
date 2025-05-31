@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: Product-Service
+  profiles:
+#    active: dev
+#    active: qa
+    active: prod
+
+
+server:
+  port: 8081

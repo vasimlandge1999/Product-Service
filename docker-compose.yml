@@ -1,0 +1,28 @@
+#version: '4'
+#services:
+#  mongodb:
+#    image: mongo: 7.0.5
+#    container_name: mongodb
+#    ports:
+#      - "27012:27017"
+#    environment:
+#      MONGO_INITDB_ROOT_USERNAME: root
+#      MONGO_INITDB_ROOT_PASSWORD: root
+#      MONGO_INITDB_ROOT_DATABASE: root
+#    volumes:
+#      - ./data:/data/db
+
+version: '3.8'  # '4' is not a valid version; use 3.8 instead
+
+services:
+  mongodb:
+    image: mongo:7.0.5
+    container_name: mongodb
+    ports:
+      - "27012:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root  # from mongo:7.0.5
+      MONGO_INITDB_ROOT_PASSWORD: root
+      MONGO_INITDB_ROOT_DATABASE: product-service
+    volumes:
+      - ./data:/data/db
